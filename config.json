@@ -1,14 +1,27 @@
 {
-    "server": "http://localhost:9191",
+    "server": "https://codecourt.org",
     "admin": {
         "email": "admin@example.org",
         "password": "pass"
     },
     "kiosk": {
-        "brackets": ["test_contest"],
+        "brackets": ["1400", "1620", "open"],
         "teachers": {
-            "1400": ["alpha", "beta"],
-            "1620": ["beta", "gamma"]
+            "1400": [
+                "Robert A Fulkerson",
+                "Mark E Mordeson",
+                "Ik-Hyun Youn",
+                "Bradley R Woosley",
+                "David Jeffrey Waszgis",
+                "Shawn C. Tumey",
+                "Jeff Blackmore",
+                "Douglas Charles Bertelsen",
+                "Ayan Dutta"],
+            "1620": [
+                "Ashwathy P Ashokan",
+                "Patrick M. Cavanaugh",
+                "Gregory Gelfond",
+                "Mark Allan Pauley"]
         },
         "domain":"unomaha.edu",
         "strings": {

@@ -1,0 +1,10 @@
+```
+npm
+git
+gtk3
+rust
+cargo
+gtk2
+libxss
+gconf
+chromium

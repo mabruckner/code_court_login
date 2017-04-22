@@ -85,9 +85,9 @@ class Main extends React.Component {
                     {tlist.map((teacher) => <option key={teacher}>{teacher}</option>)}
                 </select>;
             } else if(this.state.bracket=="") {
-                teacherOptions = <select disabled><option>Select a Bracket</option></select>;
+                teacherOptions = <span className="select"><select disabled><option>Select a Bracket</option></select></span>;
             } else {
-                teacherOptions = <input name="teacher" value={this.state.teacher} className="input" type="text" placeholder="Teacher" onChange={this.handleChange}/>
+                teacherOptions = <input name="teacher" value={this.state.teacher} className="input" type="text" placeholder="Teacher" onChange={this.handleChange}/>;
             }
             let message;
             if(this.state.error) {
@@ -137,9 +137,7 @@ class Main extends React.Component {
                     </div>
                     <div className="field">
                         <p className="control">
-                            <span className="select">
-                                {teacherOptions}
-                            </span>
+                            {teacherOptions}
                         </p>
                     </div>
                     <a className="button is-info" disabled={this.state.name==''||this.state.bracket==''||this.state.username==''||this.state.email==''} onClick={this.toLoad}>{this.props.strings.submit}</a>

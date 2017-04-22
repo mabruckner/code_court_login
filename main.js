@@ -107,7 +107,7 @@ ipc.on('create-user', function (evt, user) {
 })
 
 function createWindow () {
-    mainWindow = new BrowserWindow({width:100, height:100, frame:false})
+    mainWindow = new BrowserWindow({width:100, height:100, frame:false, kiosk: true})
 
     mainWindow.loadURL(url.format({
         pathname: path.join(__dirname, 'index.html'),
