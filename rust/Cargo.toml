@@ -1,0 +1,10 @@
+[package]
+name = "rust"
+version = "0.1.0"
+authors = ["Mitchell Bruckner <mbruckner807@gmail.com>"]
+
+[dependencies]
+image="*"
+nom="^2.2"
+qrcode="0.2.1"
+url="1.4.0"

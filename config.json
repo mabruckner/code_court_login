@@ -1,0 +1,27 @@
+{
+    "server": "http://localhost:9191",
+    "admin": {
+        "email": "admin@example.org",
+        "password": "pass"
+    },
+    "kiosk": {
+        "brackets": ["test_contest"],
+        "teachers": {
+            "1400": ["alpha", "beta"],
+            "1620": ["beta", "gamma"]
+        },
+        "domain":"unomaha.edu",
+        "strings": {
+            "title": "Welcome to the Spring 2017 Programming Competition",
+            "subtitle": "brought to you by the UNO ACM club",
+            "start": "Sign In",
+            "info": "Please fill in your information",
+            "submit": "Continue",
+            "wait": "Please wait",
+            "print": "Please take your printout"
+        }
+    },
+    "printer": {
+        "path": "/dev/usb/lp2"
+    }
+}
