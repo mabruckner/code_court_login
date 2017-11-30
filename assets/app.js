@@ -40,7 +40,7 @@ class Main extends React.Component {
         ipc.send('create-user', {
             name: this.state.name,
             username: this.state.username,
-            email: this.state.email+'@'+this.props.domain,
+            email: this.state.username,
             bracket: this.state.bracket,
             teacher: this.state.teacher,
         });
@@ -111,36 +111,10 @@ class Main extends React.Component {
                     {message}
                     <div className="field">
                         <p className="control">
-                            <input name="name" value={this.state.name} className="input" type="text" placeholder="Name" onChange={this.handleChange}/>
+                            <input name="username" value={this.state.username} className="input" type="text" placeholder="Team Name" onChange={this.handleChange}/>
                         </p>
                     </div>
-                    <div className="field">
-                        <p className="control">
-                            <input name="username" value={this.state.username} className="input" type="text" placeholder="Username" onChange={this.handleChange}/>
-                        </p>
-                    </div>
-                    <div className="field is-grouped">
-                        <p className="control is-expanded is-level">
-                            <input className="input level-item" name="email" type="text" value={this.state.email} placeholder="Email" onChange={this.handleChange}/>
-                        </p>
-                        <p className="control level-item">@{this.props.domain}</p>
-                    </div>
-                    <div className="field">
-                        <p className="control">
-                            <span className="select">
-                                <select name="bracket" value={this.state.bracket} onChange={this.handleChange}>
-                                    <option value="" disabled>Bracket</option>
-                                    {bracketOptions}
-                                </select>
-                            </span>
-                        </p>
-                    </div>
-                    <div className="field">
-                        <p className="control">
-                            {teacherOptions}
-                        </p>
-                    </div>
-                    <a className="button is-info" disabled={this.state.name==''||this.state.bracket==''||this.state.username==''||this.state.email==''} onClick={this.toLoad}>{this.props.strings.submit}</a>
+                    <a className="button is-info" disabled={this.state.username==''} onClick={this.toLoad}>{this.props.strings.submit}</a>
                 </div>
                 </div>
                 </div>);
